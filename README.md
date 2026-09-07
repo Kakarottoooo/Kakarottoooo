@@ -9,15 +9,15 @@ that can be verified offline.
 and the check runs with no account and no network:
 
 ```bash
-git clone --depth 1 https://github.com/Kakarottoooo/witnora-framework
+git clone --depth 1 https://github.com/witnora/witnora-framework
 cd witnora-framework/packages/witnora-verifier-python
 python -m unittest discover -s tests
 PYTHONPATH=src python -m witnora_verifier.cli conformance ../../test-vectors/witnora-v0.2-conformance
 # {"overall":"PASS","passed":174,"failed":0,"networkUsed":false,...}
 ```
 
-- [Offline verifier (Python)](https://github.com/Kakarottoooo/witnora-framework/tree/main/packages/witnora-verifier-python) — an independent canonical-JSON and Ed25519 implementation
-- [Trust bootstrap](https://github.com/Kakarottoooo/witnora-framework/blob/main/docs/security/trust-bootstrap.md) — a root carried inside an evidence packet cannot authorize itself; pin it out of band
+- [Offline verifier (Python)](https://github.com/witnora/witnora-framework/tree/main/packages/witnora-verifier-python) — an independent canonical-JSON and Ed25519 implementation
+- [Trust bootstrap](https://github.com/witnora/witnora-framework/blob/main/docs/security/trust-bootstrap.md) — a root carried inside an evidence packet cannot authorize itself; pin it out of band
 - [Recorded test-mode refund walkthrough](https://witnora.com/demo/shopify-refund-assurance) — replays retained evidence, issues no new refunds
 
 **What this does not claim:** coverage of action paths that were never declared,
